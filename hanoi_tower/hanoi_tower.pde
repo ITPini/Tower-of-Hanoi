@@ -5,12 +5,12 @@ Disc disc;
 Rod rod;
 
 void setup() {
-  size(500, 500);
+  size(1000, 500);
   createGUI();
   hanoi = new Hanoi();
   disc = new Disc();
-  rod = new Rod();
-  hanoi.hanoii(3, "A", "B", "C");
+  rod = new Rod(2,2);
+  hanoi.hanoii(2, "A", "B", "C");
   println(hanoi.moveCount);
   println(hanoi.time + " ms");
 }
@@ -18,5 +18,5 @@ void setup() {
 
 
 void draw() {
-  displayRod();
+  rod.displayRod();
 }

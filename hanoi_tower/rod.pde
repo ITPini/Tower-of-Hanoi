@@ -7,6 +7,8 @@ public class Rod {
   }
 
   void displayRod() {
-    rect(250, 0, 30, 400);
+    rect(width*0.25-5, height*0.20, 15, height);
+    rect(width*0.50-5, height*0.20, 15, height);
+    rect(width*0.75-5, height*0.20, 15, height);
   }
 }
