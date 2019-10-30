@@ -10,7 +10,7 @@ public class Rod{
  }
   
   void dispayRod(){
-    
+    rect(250, 0, 30, 400);
   }
   
   
