@@ -15,12 +15,17 @@
  */
 
 public void panel1_Click1(GPanel source, GEvent event) { //_CODE_:panel1:967993:
-  println("panel1 - GPanel >> GEvent." + event + " @ " + millis());
+  //println("panel1 - GPanel >> GEvent." + event + " @ " + millis());
 } //_CODE_:panel1:967993:
 
 public void DiskSelectText_change(GTextField source, GEvent event) { //_CODE_:DiskSelectText:513186:
-  println("DiskSelectText - GTextField >> GEvent." + event + " @ " + millis());
+  //println("DiskSelectText - GTextField >> GEvent." + event + " @ " + millis());
 } //_CODE_:DiskSelectText:513186:
+
+public void SolveButton_click(GButton source, GEvent event) { //_CODE_:SolveButton:355150:
+  //println("SolveButton - GButton >> GEvent." + event + " @ " + millis());
+  Solve();
+} //_CODE_:SolveButton:355150:
 
 
 
@@ -31,20 +36,25 @@ public void createGUI(){
   G4P.setGlobalColorScheme(GCScheme.BLUE_SCHEME);
   G4P.setMouseOverEnabled(false);
   surface.setTitle("Sketch Window");
-  panel1 = new GPanel(this, 0, -20, 200, 70, "Tab bar text");
+  panel1 = new GPanel(this, 0, -20, 300, 70, "Tab bar text");
   panel1.setText("Tab bar text");
   panel1.setOpaque(true);
   panel1.addEventHandler(this, "panel1_Click1");
   DiskSelectLabel = new GLabel(this, 10, 30, 130, 20);
   DiskSelectLabel.setTextAlign(GAlign.CENTER, GAlign.MIDDLE);
-  DiskSelectLabel.setText("Select Disk Amount");
+  DiskSelectLabel.setText("Disk Amount");
   DiskSelectLabel.setTextBold();
   DiskSelectLabel.setOpaque(false);
-  DiskSelectText = new GTextField(this, 150, 30, 40, 20, G4P.SCROLLBARS_NONE);
+  DiskSelectText = new GTextField(this, 130, 30, 50, 20, G4P.SCROLLBARS_NONE);
   DiskSelectText.setOpaque(true);
   DiskSelectText.addEventHandler(this, "DiskSelectText_change");
+  SolveButton = new GButton(this, 200, 30, 80, 20);
+  SolveButton.setText("Solve");
+  SolveButton.setTextBold();
+  SolveButton.addEventHandler(this, "SolveButton_click");
   panel1.addControl(DiskSelectLabel);
   panel1.addControl(DiskSelectText);
+  panel1.addControl(SolveButton);
 }
 
 // Variable declarations 
@@ -52,3 +62,4 @@ public void createGUI(){
 GPanel panel1; 
 GLabel DiskSelectLabel; 
 GTextField DiskSelectText; 
+GButton SolveButton; 
