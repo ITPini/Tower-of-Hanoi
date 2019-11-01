@@ -1,27 +1,31 @@
 import g4p_controls.*;
 import java.awt.*;
 Hanoi hanoi;
-Disk disk;
+Disk[] disk;
 Rod rod;
 
 int boxSelect;
 
 void setup() {
   size(1000, 500);
-  background(250);
   createGUI();
   hanoi = new Hanoi();
-  disk = new Disk();
-  rod = new Rod(2,2);
+  rod = new Rod(2, 2);
+
+  disk = new Disk[10];
+  for (int i = 0; i<disk.length; i++) {
+    disk[i] = new Disk(i);
+  }
 }
-
-
 
 void draw() {
+  background(255);
   rod.displayRod();
-  disk.displayDisk();
+  println(disk.length);
+  for (int i = 0; i<disk.length; i++) {
+    disk[i].display();
+  }
 }
-
 
 void Solve() {
   boxSelect = Integer.parseInt(DiskSelectText.getText());

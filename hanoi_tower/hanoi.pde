@@ -10,8 +10,8 @@ public class Hanoi {
     moveCount ++; 
     return moveCount;
   }
-  
-  long runTime(){
+
+  long runTime() {
     return time = millis();
   }
 
