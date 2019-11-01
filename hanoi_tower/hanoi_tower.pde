@@ -22,7 +22,7 @@ void draw() {
 void Solve() {
   background(255);
   hanoi.moveCount = 0;
-  hanoi.time = 0;
+  //hanoi.time;
   rod.displayRod();
   boxSelect = Integer.parseInt(DiskSelectText.getText());
   hanoi.hanoii(boxSelect, "A", "B", "C");

@@ -1,6 +1,6 @@
 public class Hanoi {
   public int moveCount;
-  long time;
+  long time = 0;
 
   Hanoi() {
     moveCount = 0;
@@ -24,6 +24,7 @@ public class Hanoi {
   }
 
   void hanoii(int n, String f, String h, String t) {
+    time = 0;
     if (n ==0 ) {
       return;
     } else {

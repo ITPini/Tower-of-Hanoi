@@ -6,9 +6,9 @@ public class Disk {
   float posY2;
 
   Disk() {
-    this.posX1 = width*0.25-75+(5*number);
+    this.posX1 = width*0.75-75+(5*number);
     this.posY1 = height-(20*number);
-    this.posX1 = width*0.25+80-(5*number);
+    this.posX1 = width*0.75+80-(5*number);
     this.posY1 = height-(20*number+20);
   }
 
@@ -19,7 +19,7 @@ public class Disk {
   void display() {
     fill(100);
     rectMode(CORNERS);
-    rect(width*0.25-75+(5*number), height-(20*number), width*0.25+80-(5*number), height-(20*number+20));
+    rect(width*0.75-75+(5*number), height-(20*number), width*0.75+80-(5*number), height-(20*number+20));
   }
 
   void move(float _t) {
