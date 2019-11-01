@@ -22,11 +22,9 @@ public class Disk {
     rect(width*0.25-75+(5*number), height-(20*number), width*0.25+80-(5*number), height-(20*number+20));
   }
 
-  /*
-  void move(int _n, float _t) {
-   fill(100);
-   rectMode(CORNERS);
-   rect(width*_t-75+(5*_n), height-(20*_n), width*_t+80-(5*_n), height-(20*_n+20));
-   }
-   */
+  void move(float _t) {
+    fill(100);
+    rectMode(CORNERS);
+    rect(width*_t-75+(5*number), height-(20*number), width*_t+80-(5*number), height-(20*number+20));
+  }
 }
